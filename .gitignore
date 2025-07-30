@@ -1,0 +1,22 @@
+# Build output
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+
+# VSCode config
+.vscode/
+
+# Rider config
+.idea/
+
+# Others
+*.db
+*.sqlite
+*.log
+
+# App settings (se sensível)
+appsettings.Development.json
+appsettings.Local.json
