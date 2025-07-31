@@ -18,6 +18,15 @@ namespace LaboratorioF.Repositories.Implementations
             return _context.Livros.ToList();
         }
 
+      public IEnumerable<Livro> BuscarPorTitulo(string titulo)
+    {
+            return _context.Livros
+                .Where(l => l.Titulo != null && l.Titulo.Contains(titulo))
+                .ToList();
+    }
+
+
+
         public Livro? BuscarPorId(int id)
         {
             return _context.Livros.FirstOrDefault(l => l.Id == id);
