@@ -10,6 +10,7 @@ builder.Services.AddDbContext<BibliotecaContext>(options =>
 
 builder.Services.AddScoped<IAutorRepository, AutorRepository>();
 builder.Services.AddScoped<ILivroRepository, LivroRepository>();
+builder.Services.AddScoped<IEmprestimoRepository, EmprestimoRepository>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
