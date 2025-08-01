@@ -1,0 +1,33 @@
+@model List<LaboratorioMVC.Models.DTOs.LivroDisponivelDTO>
+
+<h2>Buscar Livros por Autor</h2>
+
+<form method="get" asp-action="Buscar">
+    <input type="text" name="autor" placeholder="Digite o nome do autor" class="form-control" />
+    <button type="submit" class="btn btn-primary mt-2">Buscar</button>
+</form>
+
+@if (Model.Any())
+{
+    <table class="table mt-3">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Disponível</th>
+                <th>Próxima Disponibilidade</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var livro in Model)
+        {
+            <tr>
+                <td>@livro.Titulo</td>
+                <td>@livro.Autor</td>
+                <td>@(livro.Disponivel ? "Sim" : "Não")</td>
+                <td>@livro.ProximaDisponibilidade?.ToString("dd/MM/yyyy")</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

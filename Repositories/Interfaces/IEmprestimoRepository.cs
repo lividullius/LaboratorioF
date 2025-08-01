@@ -1,4 +1,5 @@
 using LaboratorioF.models;
+using LaboratorioMVC.Models.DTOs;
 
 namespace LaboratorioF.Repositories.Interfaces
 {
@@ -8,6 +9,7 @@ namespace LaboratorioF.Repositories.Interfaces
         void Atualizar(Emprestimo emprestimo);
         Emprestimo? ObterPorId(int id);
         Emprestimo? ObterEmprestimoEmAbertoPorLivro(int livroId);
-        IEnumerable<object> BuscarLivrosDisponiveisPorAutor(string autor);
-    }
+        IEnumerable<LivroDisponivelDTO> BuscarLivrosDisponiveisPorAutor(string autor);
 }
+    }
+

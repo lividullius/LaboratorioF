@@ -1,0 +1,12 @@
+@model LaboratorioMVC.Models.DTOs.EmprestimoDTO
+
+<h2>Emprestar Livro</h2>
+
+<form asp-action="Emprestar" method="post">
+    <div class="mb-3">
+        <label class="form-label">ID do Livro</label>
+        <input asp-for="LivroId" class="form-control" />
+        <span asp-validation-for="LivroId" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Emprestar</button>
+</form>
